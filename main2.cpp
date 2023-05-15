@@ -10,6 +10,9 @@ using namespace std;
 
 bool IsKPeriodic(string str, int k) 
 {
+	 if (k <= 0 || str.length() % k != 0) {
+    return false;
+  }
 	const int interval_length = k;
 	const int count_blocks = str.length() / interval_length;
 	const std::string first_block = str.substr(0, interval_length);
